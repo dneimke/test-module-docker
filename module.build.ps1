@@ -60,7 +60,7 @@ Add-BuildTask Test {
 }
 
 Add-BuildTask Build {
-    Write-Output "Build: (Not yet implemented)"
+    Copy-Item $moduleSourcePath -Destination "$buildOutputPath\$moduleName" -Recurse -Exclude "*.Tests.ps1"
 }
 
 Add-BuildTask LocalPublish {

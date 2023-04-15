@@ -1,9 +1,6 @@
 BeforeAll {
     Get-Module TestableModule | Remove-Module -Force
     Import-Module TestableModule -Force
-
-    $SourcePath = "TestDrive:\$([Guid]::NewGuid())"
-    New-Item -Path $SourcePath -ItemType Directory
 }
 
 Describe "Invoke-Echo" {

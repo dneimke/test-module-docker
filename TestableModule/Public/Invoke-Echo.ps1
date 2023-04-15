@@ -14,7 +14,7 @@ function Invoke-Echo {
     )
 
     begin {
-        Write-Log -Message "[$($MyInvocation.MyCommand.Name)] started." -Severity "Verbose"
+        Write-Log -Message "[$($MyInvocation.MyCommand.Name)] started." -Severity "Information"
     }
 
     process {
@@ -22,6 +22,6 @@ function Invoke-Echo {
     }
 
     end {
-        Write-Log -Message "[$($MyInvocation.MyCommand.Name)] completed." -Severity "Verbose"
+        Write-Log -Message "[$($MyInvocation.MyCommand.Name)] completed." -Severity "Information"
     }
 }

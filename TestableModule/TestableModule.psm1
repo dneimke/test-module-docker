@@ -1,7 +1,8 @@
 $PublicScripts = @( Get-ChildItem -Path "$($PSScriptRoot)\Public\*.ps1" -ErrorAction SilentlyContinue )
+$PrivateScripts = @( Get-ChildItem -Path "$($PSScriptRoot)\Private\*.ps1" -ErrorAction SilentlyContinue )
 
 # Dot source the functions
-foreach ($file in @($PublicScripts)) {
+foreach ($file in @($PublicScripts + $PrivateScripts)) {
 
     try {
         . $file.FullName
